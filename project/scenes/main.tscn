@@ -1,0 +1,84 @@
+[gd_scene load_steps=7 format=3 uid="uid://cc7pd1wlfvmxv"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://dxjn3nsi606cu" path="res://scenes/game.tscn" id="2"]
+[ext_resource type="AudioStream" uid="uid://crxlemltdxwmi" path="res://assets/sounds/ding.wav" id="5"]
+[ext_resource type="Texture2D" uid="uid://cfb56anvactow" path="res://assets/images/mayoi_spiralgeass.png" id="6"]
+
+[sub_resource type="Animation" id="2"]
+resource_name = "text_anim"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("label:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_meeyp"]
+_data = {
+"text_anim": SubResource("2")
+}
+
+[node name="ui" type="CanvasLayer"]
+layer = 0
+script = ExtResource("1")
+
+[node name="bg" type="Polygon2D" parent="."]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-1.84277, -4.75256, 959.831, -1.23639, 961.589, 542.012, -0.0846558, 543.771)
+
+[node name="game" parent="." instance=ExtResource("2")]
+
+[node name="label" type="Label" parent="."]
+text = "play again?"
+
+[node name="anim" type="AnimationPlayer" parent="."]
+playback_process_mode = 0
+libraries = {
+"": SubResource("AnimationLibrary_meeyp")
+}
+
+[node name="start_timer" type="Timer" parent="."]
+process_mode = 1
+wait_time = 3.0
+one_shot = true
+
+[node name="end_timer" type="Timer" parent="."]
+process_mode = 1
+wait_time = 3.0
+one_shot = true
+
+[node name="play_button" type="Button" parent="."]
+visible = false
+text = "play again?"
+flat = true
+
+[node name="link" type="Label" parent="."]
+text = "https://github.com/tiangela1027/Hangman"
+
+[node name="start_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5")
+
+[node name="mayoi" type="TextureRect" parent="."]
+visible = false
+texture = ExtResource("6")
+
+[node name="mayoi_timer" type="Timer" parent="mayoi"]
+process_mode = 1
+wait_time = 3.0
+one_shot = true
+
+[connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
+[connection signal="timeout" from="start_timer" to="." method="_on_start_timer_timeout"]
+[connection signal="timeout" from="end_timer" to="." method="_on_end_timer_timeout"]
+[connection signal="pressed" from="play_button" to="." method="_on_play_button_down"]
+[connection signal="timeout" from="mayoi/mayoi_timer" to="." method="_on_mayoi_timer_timeout"]
+
+[editable path="game"]
+[editable path="game/alphabet"]

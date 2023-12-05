@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://do2efou0utuwh"]
+
+[ext_resource type="Script" path="res://Stage 1.gd" id="1_q2avj"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Stage 1" type="Button" parent="."]
+offset_left = 47.0
+offset_top = 5.0
+offset_right = 128.0
+offset_bottom = 70.0
+text = "1-1"
+script = ExtResource("1_q2avj")
+
+[connection signal="pressed" from="Stage 1" to="Stage 1" method="_on_pressed"]

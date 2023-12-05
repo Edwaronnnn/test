@@ -1,0 +1,290 @@
+[gd_scene load_steps=9 format=3 uid="uid://qesto5bkr7uu"]
+
+[ext_resource type="Script" path="res://stage1.gd" id="1_jsq1h"]
+[ext_resource type="Shader" path="res://scenes/picture.gdshader" id="2_cao0r"]
+[ext_resource type="Texture2D" uid="uid://brh05gihbt0vf" path="res://icon.svg" id="3_iixfr"]
+[ext_resource type="Texture2D" uid="uid://gmbvjm1tx70u" path="res://Tilemap/tilemap_packed.png" id="4_ubl0r"]
+[ext_resource type="PackedScene" uid="uid://cohb1reb7oc7p" path="res://block.tscn" id="5_lqq1y"]
+[ext_resource type="PackedScene" uid="uid://cb1j1sghelba3" path="res://jack.tscn" id="6_gywbf"]
+[ext_resource type="PackedScene" uid="uid://dp8otw1igh6rb" path="res://timer.tscn" id="7_xjoeb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_26x83"]
+render_priority = 0
+shader = ExtResource("2_cao0r")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_jsq1h")
+
+[node name="A" type="Button" parent="."]
+offset_left = 234.0
+offset_top = 257.0
+offset_right = 274.0
+offset_bottom = 291.0
+text = "A"
+
+[node name="B" type="Button" parent="."]
+offset_left = 465.0
+offset_top = 313.0
+offset_right = 505.0
+offset_bottom = 347.0
+text = "B"
+
+[node name="C" type="Button" parent="."]
+offset_left = 357.0
+offset_top = 315.0
+offset_right = 397.0
+offset_bottom = 349.0
+text = "C"
+
+[node name="D" type="Button" parent="."]
+offset_left = 343.0
+offset_top = 257.0
+offset_right = 383.0
+offset_bottom = 291.0
+text = "D"
+metadata/_edit_use_anchors_ = true
+
+[node name="E" type="Button" parent="."]
+offset_left = 337.0
+offset_top = 183.0
+offset_right = 377.0
+offset_bottom = 217.0
+text = "E"
+metadata/_edit_use_anchors_ = true
+
+[node name="F" type="Button" parent="."]
+offset_left = 409.0
+offset_top = 259.0
+offset_right = 449.0
+offset_bottom = 293.0
+text = "F"
+metadata/_edit_use_anchors_ = true
+
+[node name="G" type="Button" parent="."]
+offset_left = 480.0
+offset_top = 262.0
+offset_right = 520.0
+offset_bottom = 296.0
+text = "G"
+metadata/_edit_use_anchors_ = true
+
+[node name="H" type="Button" parent="."]
+offset_left = 535.0
+offset_top = 261.0
+offset_right = 575.0
+offset_bottom = 295.0
+text = "H"
+metadata/_edit_use_anchors_ = true
+
+[node name="I" type="Button" parent="."]
+offset_left = 579.0
+offset_top = 181.0
+offset_right = 619.0
+offset_bottom = 215.0
+text = "I"
+metadata/_edit_use_anchors_ = true
+
+[node name="J" type="Button" parent="."]
+offset_left = 588.0
+offset_top = 262.0
+offset_right = 628.0
+offset_bottom = 296.0
+text = "J"
+
+[node name="K" type="Button" parent="."]
+offset_left = 639.0
+offset_top = 261.0
+offset_right = 680.0
+offset_bottom = 292.0
+text = "K"
+
+[node name="L" type="Button" parent="."]
+offset_left = 694.0
+offset_top = 259.0
+offset_right = 734.0
+offset_bottom = 293.0
+text = "L"
+metadata/_edit_use_anchors_ = true
+
+[node name="M" type="Button" parent="."]
+offset_left = 576.0
+offset_top = 311.0
+offset_right = 616.0
+offset_bottom = 345.0
+text = "M"
+metadata/_edit_use_anchors_ = true
+
+[node name="N" type="Button" parent="."]
+offset_left = 520.0
+offset_top = 313.0
+offset_right = 560.0
+offset_bottom = 347.0
+text = "N"
+metadata/_edit_use_anchors_ = true
+
+[node name="O" type="Button" parent="."]
+offset_left = 644.0
+offset_top = 181.0
+offset_right = 684.0
+offset_bottom = 215.0
+text = "O"
+
+[node name="P" type="Button" parent="."]
+offset_left = 704.0
+offset_top = 182.0
+offset_right = 744.0
+offset_bottom = 216.0
+text = "P"
+metadata/_edit_use_anchors_ = true
+
+[node name="Q" type="Button" parent="."]
+offset_left = 236.0
+offset_top = 184.0
+offset_right = 276.0
+offset_bottom = 218.0
+text = "Q"
+metadata/_edit_use_anchors_ = true
+
+[node name="R" type="Button" parent="."]
+offset_left = 391.0
+offset_top = 182.0
+offset_right = 431.0
+offset_bottom = 216.0
+text = "R"
+metadata/_edit_use_anchors_ = true
+
+[node name="S" type="Button" parent="."]
+offset_left = 284.0
+offset_top = 257.0
+offset_right = 324.0
+offset_bottom = 291.0
+text = "S"
+metadata/_edit_use_anchors_ = true
+
+[node name="T" type="Button" parent="."]
+offset_left = 437.0
+offset_top = 180.0
+offset_right = 477.0
+offset_bottom = 214.0
+text = "T"
+metadata/_edit_use_anchors_ = true
+
+[node name="U" type="Button" parent="."]
+offset_left = 529.0
+offset_top = 181.0
+offset_right = 569.0
+offset_bottom = 215.0
+text = "U"
+metadata/_edit_use_anchors_ = true
+
+[node name="V" type="Button" parent="."]
+offset_left = 412.0
+offset_top = 315.0
+offset_right = 452.0
+offset_bottom = 349.0
+text = "V"
+metadata/_edit_use_anchors_ = true
+
+[node name="W" type="Button" parent="."]
+offset_left = 286.0
+offset_top = 185.0
+offset_right = 326.0
+offset_bottom = 219.0
+text = "W"
+metadata/_edit_use_anchors_ = true
+
+[node name="X" type="Button" parent="."]
+offset_left = 306.0
+offset_top = 317.0
+offset_right = 346.0
+offset_bottom = 351.0
+text = "X"
+metadata/_edit_use_anchors_ = true
+
+[node name="Y" type="Button" parent="."]
+offset_left = 482.0
+offset_top = 176.0
+offset_right = 522.0
+offset_bottom = 210.0
+text = "Y"
+metadata/_edit_use_anchors_ = true
+
+[node name="Z" type="Button" parent="."]
+offset_left = 264.0
+offset_top = 316.0
+offset_right = 296.0
+offset_bottom = 352.0
+text = "Z"
+
+[node name="Space" type="Button" parent="."]
+offset_left = 363.0
+offset_top = 374.0
+offset_right = 523.0
+offset_bottom = 405.0
+text = "Space
+"
+
+[node name="GuessedWordLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Picture" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_26x83")
+offset_left = 228.0
+offset_top = 7.0
+offset_right = 356.0
+offset_bottom = 135.0
+texture = ExtResource("3_iixfr")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(619, 67)
+scale = Vector2(0.312222, 0.267836)
+
+[node name="TilemapPacked" type="Sprite2D" parent="."]
+position = Vector2(832, 101)
+texture = ExtResource("4_ubl0r")
+region_enabled = true
+
+[node name="StaticBody2D" parent="." instance=ExtResource("5_lqq1y")]
+position = Vector2(-182, 45)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("6_gywbf")]
+position = Vector2(-133, -81)
+
+[node name="Timer2" parent="." instance=ExtResource("7_xjoeb")]
+position = Vector2(1070, 11)
+
+[node name="ChanceLeft" type="Label" parent="."]
+offset_left = 798.0
+offset_top = 1.0
+offset_right = 978.0
+offset_bottom = 71.0
+text = "Chance Left:"
+
+[connection signal="pressed" from="A" to="." method="_on_a_pressed"]
+[connection signal="pressed" from="B" to="." method="_on_b_pressed"]
+[connection signal="pressed" from="C" to="." method="_on_c_pressed"]
+[connection signal="pressed" from="D" to="." method="_on_d_pressed"]
+[connection signal="pressed" from="E" to="." method="_on_e_pressed"]
+[connection signal="pressed" from="F" to="." method="_on_f_pressed"]
+[connection signal="pressed" from="G" to="." method="_on_g_pressed"]
+[connection signal="pressed" from="H" to="." method="_on_h_pressed"]
+[connection signal="pressed" from="I" to="." method="_on_i_pressed"]
+[connection signal="pressed" from="J" to="." method="_on_j_pressed"]
+[connection signal="pressed" from="K" to="." method="_on_k_pressed"]
+[connection signal="pressed" from="L" to="." method="_on_l_pressed"]
+[connection signal="pressed" from="M" to="." method="_on_m_pressed"]
+[connection signal="pressed" from="N" to="." method="_on_n_pressed"]
+[connection signal="pressed" from="O" to="." method="_on_o_pressed"]
+[connection signal="pressed" from="P" to="." method="_on_p_pressed"]
+[connection signal="pressed" from="Q" to="." method="_on_q_pressed"]
+[connection signal="pressed" from="R" to="." method="_on_r_pressed"]
+[connection signal="pressed" from="S" to="." method="_on_s_pressed"]
+[connection signal="pressed" from="T" to="." method="_on_t_pressed"]
+[connection signal="pressed" from="U" to="." method="_on_u_pressed"]
+[connection signal="pressed" from="V" to="." method="_on_v_pressed"]
+[connection signal="pressed" from="W" to="." method="_on_w_pressed"]
+[connection signal="pressed" from="X" to="." method="_on_x_pressed"]
+[connection signal="pressed" from="Y" to="." method="_on_y_pressed"]
+[connection signal="pressed" from="Z" to="." method="_on_z_pressed"]
+[connection signal="pressed" from="Space" to="." method="_on_space_pressed"]

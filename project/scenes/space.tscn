@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dwvag0yshj6dm"]
+
+[node name="space" type="Node2D"]
+
+[node name="line" type="Line2D" parent="."]
+points = PackedVector2Array(47.5168, 0.244364, 0.210434, 0.203279)
+width = 2.0
+texture_mode = 1209988752
+
+[node name="letter" type="Label" parent="."]
