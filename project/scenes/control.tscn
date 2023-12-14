@@ -1,6 +1,60 @@
-[gd_scene load_steps=2 format=3 uid="uid://b83yblssj0jdk"]
+[gd_scene load_steps=17 format=3 uid="uid://b83yblssj0jdk"]
 
 [ext_resource type="Script" path="res://Control.gd" id="1_8b2ey"]
+[ext_resource type="Texture2D" uid="uid://sy380qkcrwwp" path="res://assets/images/main-sdxl_178e56722c34d2967671d0be308d631181cc506c8f5733cd52789570de443a9f.png" id="2_6mw6p"]
+[ext_resource type="AudioStream" uid="uid://cwhiwjmpdpau3" path="res://assets/sounds/button-124476.mp3" id="3_tx7rs"]
+[ext_resource type="Texture2D" uid="uid://dx08tvq1ieo8" path="res://assets/images/buttons.png" id="4_7wn32"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eri7d"]
+texture = ExtResource("4_7wn32")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_84ran"]
+texture = ExtResource("4_7wn32")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jtr38"]
+texture = ExtResource("4_7wn32")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="Theme" id="Theme_n40q7"]
+Button/styles/hover = SubResource("StyleBoxTexture_eri7d")
+Button/styles/normal = SubResource("StyleBoxTexture_84ran")
+Button/styles/pressed = SubResource("StyleBoxTexture_jtr38")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nyx4m"]
+texture = ExtResource("4_7wn32")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_13hgr"]
+texture = ExtResource("4_7wn32")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o26kj"]
+texture = ExtResource("4_7wn32")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="Theme" id="Theme_lvfma"]
+Button/styles/hover = SubResource("StyleBoxTexture_nyx4m")
+Button/styles/normal = SubResource("StyleBoxTexture_13hgr")
+Button/styles/pressed = SubResource("StyleBoxTexture_o26kj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_onp47"]
+texture = ExtResource("4_7wn32")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ii6f2"]
+texture = ExtResource("4_7wn32")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oju6v"]
+texture = ExtResource("4_7wn32")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="Theme" id="Theme_2uen3"]
+Button/styles/hover = SubResource("StyleBoxTexture_onp47")
+Button/styles/normal = SubResource("StyleBoxTexture_ii6f2")
+Button/styles/pressed = SubResource("StyleBoxTexture_oju6v")
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -11,30 +65,64 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8b2ey")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(900, 900)
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 1024.0
+scale = Vector2(1, 0.635)
+texture = ExtResource("2_6mw6p")
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 333.0
+offset_bottom = 311.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "PLAY"
-
-[node name="Option" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "OPTION"
-
-[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "QUIT"
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="music" type="AudioStreamPlayer2D" parent="."]
 volume_db = 4.19
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Option" to="." method="_on_option_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ParallaxBackground"]
+
+[node name="click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_tx7rs")
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 2
+offset_left = 60.0
+offset_top = 358.0
+offset_right = 164.0
+offset_bottom = 423.0
+theme = SubResource("Theme_n40q7")
+text = "PLAY"
+
+[node name="Option" type="Button" parent="."]
+layout_mode = 2
+offset_left = 64.0
+offset_top = 435.0
+offset_right = 164.0
+offset_bottom = 497.0
+theme = SubResource("Theme_lvfma")
+text = "OPTION"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 2
+offset_left = 66.0
+offset_top = 511.0
+offset_right = 158.0
+offset_bottom = 581.0
+theme = SubResource("Theme_2uen3")
+text = "QUIT"
+
+[connection signal="mouse_entered" from="Play" to="." method="_on_play_mouse_entered"]
+[connection signal="pressed" from="Play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="gui_input" from="Option" to="." method="_on_option_gui_input"]
+[connection signal="pressed" from="Option" to="." method="_on_option_pressed"]
+[connection signal="mouse_entered" from="Quit" to="." method="_on_quit_mouse_entered"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

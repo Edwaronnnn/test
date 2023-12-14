@@ -5,12 +5,12 @@
 [node name="Timer" type="Node2D"]
 script = ExtResource("1_uclsy")
 
-[node name="Timer Label" type="Label" parent="."]
+[node name="TimeLimit Tabel" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 3.272
+[node name="TimeLimit" type="Timer" parent="."]
+wait_time = 60.0
 autostart = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="TimeLimit" to="." method="_on_timer_timeout"]

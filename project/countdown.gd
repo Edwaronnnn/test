@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var countdown_timer: Timer = $Timer
-@onready var timer_label: Label = $"Timer Label"
+@onready var countdown_timer: Timer = $TimeLimit
+@onready var timer_label: Label = $"TimeLimit Tabel"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -18,7 +18,7 @@ func time_left_to_live():
 	
 func _process(delta):
 	timer_label.text = "%02d:%02d" % time_left_to_live()
-
+	print(time_left_to_live())
 
 
 

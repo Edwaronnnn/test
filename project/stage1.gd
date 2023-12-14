@@ -7,9 +7,9 @@ var maxAttempts := 6
 var attemptsLeft := maxAttempts
 var pictureStage := 0
 var pictureTextures : Array
+@onready var countdown_timer: Timer = $StarTimer
 
-@onready var countdown_timer = $Timer
-@onready var timer_label = $LabelTimer
+
 
 
 
@@ -18,7 +18,7 @@ var guessedWordLabel : Label
 
 
 func _ready():
-	
+	countdown_timer.start()
 
 
 	pictureTextures = [
@@ -48,84 +48,112 @@ func _ready():
 
 	# Display the initial state of guessedWord with underlines
 
-
+func time_left_to_live():
+	var time_left = countdown_timer.time_left
+	var second = int(time_left) % 60
+	return [second]
 
 # Called when the node enters the scene tree for the first time.
 
 # Handle button presses for guessing a letter.
 func _on_a_pressed():
+	$click.play()
 	guess_letter("A")
 func _on_b_pressed():
+	$click.play()
 	guess_letter("B")
 func _on_c_pressed():
+	$click.play()
 	guess_letter("C")
 func _on_d_pressed():
+	$click.play()
 	guess_letter("D")
 func _on_e_pressed():
+	$click.play()
 	guess_letter("E")
 func _on_f_pressed():
+	$click.play()
 	guess_letter("F")
 func _on_g_pressed():
+	$click.play()
 	guess_letter("G")
 func _on_h_pressed():
+	$click.play()
 	guess_letter("H")
 func _on_i_pressed():
+	$click.play()
 	guess_letter("I")
 func _on_j_pressed():
+	$click.play()
 	guess_letter("J")
 func _on_k_pressed():
+	$click.play()
 	guess_letter("K")
 func _on_l_pressed():
+	$click.play()
 	guess_letter("L")
 func _on_m_pressed():
+	$click.play()
 	guess_letter("M")
 func _on_n_pressed():
+	$click.play()
 	guess_letter("N")
 func _on_o_pressed():
+	$click.play()
 	guess_letter("O")
 func _on_p_pressed():
+	$click.play()
 	guess_letter("P")
 func _on_q_pressed():
+	$click.play()
 	guess_letter("Q")
 
 func _process(delta):
 	$ChanceLeft.text = "Chances Left: " + str(attemptsLeft)
 func _on_r_pressed():
+	$click.play()
 	guess_letter("R")
 
 
 func _on_s_pressed():
+	$click.play()
 	guess_letter("S")
 
 
 func _on_t_pressed():
+	$click.play()
 	guess_letter("T")
 
 
 func _on_u_pressed():
+	$click.play()
 	guess_letter("U")
 
 
 func _on_v_pressed():
+	$click.play()
 	guess_letter("V")
 
 
 func _on_w_pressed():
+	$click.play()
 	guess_letter("W")
 
 
 func _on_x_pressed():
+	$click.play()
 	guess_letter("X")
 
 
 func _on_y_pressed():
+	$click.play()
 	guess_letter("Y")
 
 
 func _on_z_pressed():
+	$click.play()
 	guess_letter("Z")
-func _on_space_pressed():
-	guess_letter(" ")
+
 
 
 # Define other button press functions for other letters similarly.
@@ -166,7 +194,7 @@ func guess_letter(letter):
 
 		# Check if the player has won
 		if targetWord == guessedWord:
-			game_over("Congratulations! You guessed the word.")
+			checkGameStatus()
 		else:
 			# Increment the pictureStage and update the picture
 			pictureStage += 1
@@ -181,25 +209,20 @@ func guess_letter(letter):
 # Check if the game is over (win or lose).
 func checkGameStatus():
 	if attemptsLeft == 0:
-		
-		game_over("You lost! The word was: " + targetWord)
+		var tree = get_tree()
+		if tree:
+			tree.change_scene_to_file("res://game_over_1.tscn")
 	elif targetWord == guessedWord:
 		# Player won
-		game_over("Congratulations! You guessed the word.")
-
-# Display a game over message and reset the game.
-func game_over(message):
-	if message == "Congratulations! You guessed the word.":
-		get_tree().change_scene_to_file("res://scenes/control.tscn")
-	
-	elif message == "You lost! The word was: " + targetWord:
-		get_tree().change_scene_to_file("res://game_over_1.tscn")
+		var tree = get_tree()
+		if tree and time_left_to_live() < [60] :
+			tree.change_scene_to_file("res://scenes/control.tscn")
 
 
 
 
 
-	
+
 
 
 

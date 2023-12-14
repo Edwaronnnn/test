@@ -9,7 +9,7 @@ offset_left = 47.0
 offset_top = 5.0
 offset_right = 128.0
 offset_bottom = 70.0
-text = "1-1"
+text = "3-1"
 script = ExtResource("1_q2avj")
 
 [connection signal="pressed" from="Stage 1" to="Stage 1" method="_on_pressed"]
