@@ -3,7 +3,7 @@ extends Node2D
 # Variables for game logic
 var targetWord := "ARTERI"
 var guessedWord := ""
-var maxAttempts := 6
+var maxAttempts := 5
 var attemptsLeft := maxAttempts
 var pictureStage := 0
 var pictureTextures : Array
@@ -211,12 +211,12 @@ func checkGameStatus():
 	if attemptsLeft == 0:
 		var tree = get_tree()
 		if tree:
-			tree.change_scene_to_file("res://game_over_1.tscn")
+			SceneTransition.change_scene("res://game_over_1.tscn")
 	elif targetWord == guessedWord:
 		# Player won
 		var tree = get_tree()
-		if tree and time_left_to_live() < [60] :
-			tree.change_scene_to_file("res://scenes/control.tscn")
+		if tree and attemptsLeft < 4 :
+			SceneTransition.change_scene("res://scenes/control.tscn")
 
 
 

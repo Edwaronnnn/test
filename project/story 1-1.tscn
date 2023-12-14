@@ -7,6 +7,6 @@
 script = ExtResource("1_lg8wd")
 
 [node name="Bar" type="Sprite2D" parent="."]
-position = Vector2(572.5, 332.5)
-scale = Vector2(0.591146, 0.621296)
+position = Vector2(572.5, 323.5)
+scale = Vector2(0.591146, 0.604629)
 texture = ExtResource("2_kwon6")

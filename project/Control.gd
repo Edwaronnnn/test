@@ -6,11 +6,11 @@ extends Control
 
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://assets/pilih_kelas.tscn")
+	SceneTransition.change_scene("res://assets/pilih_kelas.tscn")
 
 
 func _on_option_pressed():
-	get_tree().change_scene_to_file("res://scenes/audio.tscn")
+	SceneTransition.change_scene("res://scenes/audio.tscn")
 
 
 func _on_quit_pressed():

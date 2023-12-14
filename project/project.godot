@@ -22,6 +22,7 @@ config/icon="res://icon.svg"
 AudioStreamPlayer2d="*res://audio_stream_player_2d.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Audio="*res://scenes/audio.tscn"
+SceneTransition="*res://scenes/scene_transition.tscn"
 
 [editor_plugins]
 
