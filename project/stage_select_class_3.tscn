@@ -1,15 +1,142 @@
-[gd_scene load_steps=2 format=3 uid="uid://do2efou0utuwh"]
+[gd_scene load_steps=23 format=3 uid="uid://d341se0rrae3c"]
 
-[ext_resource type="Script" path="res://Stage 1.gd" id="1_q2avj"]
+[ext_resource type="Texture2D" uid="uid://cpr87x187g3om" path="res://assets/images/backgrounds/kitchen.png" id="1_jhua4"]
+[ext_resource type="Script" path="res://stage_select_class_3.gd" id="1_yxiqi"]
+[ext_resource type="AudioStream" uid="uid://cwhiwjmpdpau3" path="res://assets/sounds/button-124476.mp3" id="2_l24sm"]
+[ext_resource type="FontFile" uid="uid://buamlm1honkuj" path="res://assets/fonts/ACMESecretAgentBB_BoldItal.ttf" id="3_gq6d1"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d74as"]
+load_path = "res://.godot/imported/buttons.png-75fb77b99909d3d0b6f3beb8b32d56a7.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xx7hm"]
+texture = SubResource("CompressedTexture2D_d74as")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e121j"]
+texture = SubResource("CompressedTexture2D_d74as")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5i1cc"]
+texture = SubResource("CompressedTexture2D_d74as")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="Theme" id="Theme_fuyi5"]
+Button/styles/hover = SubResource("StyleBoxTexture_xx7hm")
+Button/styles/normal = SubResource("StyleBoxTexture_e121j")
+Button/styles/pressed = SubResource("StyleBoxTexture_5i1cc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8c40x"]
+texture = SubResource("CompressedTexture2D_d74as")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f36h7"]
+texture = SubResource("CompressedTexture2D_d74as")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_80fxf"]
+texture = SubResource("CompressedTexture2D_d74as")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="Theme" id="Theme_ag5be"]
+Button/styles/hover = SubResource("StyleBoxTexture_8c40x")
+Button/styles/normal = SubResource("StyleBoxTexture_f36h7")
+Button/styles/pressed = SubResource("StyleBoxTexture_80fxf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dhvb5"]
+texture = SubResource("CompressedTexture2D_d74as")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3huyr"]
+texture = SubResource("CompressedTexture2D_d74as")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wv0d5"]
+texture = SubResource("CompressedTexture2D_d74as")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="Theme" id="Theme_4hapx"]
+Button/styles/hover = SubResource("StyleBoxTexture_dhvb5")
+Button/styles/normal = SubResource("StyleBoxTexture_3huyr")
+Button/styles/pressed = SubResource("StyleBoxTexture_wv0d5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lbgwk"]
+texture = SubResource("CompressedTexture2D_d74as")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="Theme" id="Theme_bgxwy"]
+default_font = ExtResource("3_gq6d1")
+default_font_size = 40
+Label/styles/normal = SubResource("StyleBoxTexture_lbgwk")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_am7qm"]
+load_path = "res://.godot/imported/buttons.png-75fb77b99909d3d0b6f3beb8b32d56a7.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v04ia"]
+texture = SubResource("CompressedTexture2D_am7qm")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="Theme" id="Theme_ngfbo"]
+Button/styles/focus = SubResource("StyleBoxTexture_v04ia")
+Button/styles/hover = SubResource("StyleBoxTexture_v04ia")
+Button/styles/normal = SubResource("StyleBoxTexture_v04ia")
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_yxiqi")
 
-[node name="Stage 1" type="Button" parent="."]
-offset_left = 47.0
-offset_top = 5.0
-offset_right = 128.0
-offset_bottom = 70.0
+[node name="Kitchen" type="Sprite2D" parent="."]
+position = Vector2(581.5, 329)
+scale = Vector2(0.800974, 0.804938)
+texture = ExtResource("1_jhua4")
+
+[node name="Stage 3-1" type="Button" parent="."]
+offset_left = 40.0
+offset_top = 234.0
+offset_right = 121.0
+offset_bottom = 299.0
+theme = SubResource("Theme_fuyi5")
 text = "3-1"
-script = ExtResource("1_q2avj")
 
-[connection signal="pressed" from="Stage 1" to="Stage 1" method="_on_pressed"]
+[node name="Stage 3-2" type="Button" parent="."]
+offset_left = 144.0
+offset_top = 232.0
+offset_right = 235.0
+offset_bottom = 300.0
+theme = SubResource("Theme_ag5be")
+text = "3-2"
+
+[node name="Stage 3-3" type="Button" parent="."]
+offset_left = 259.0
+offset_top = 231.0
+offset_right = 340.0
+offset_bottom = 295.0
+theme = SubResource("Theme_4hapx")
+text = "3-3"
+
+[node name="click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_l24sm")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 418.671
+offset_top = 28.9716
+offset_right = 753.671
+offset_bottom = 189.972
+theme = SubResource("Theme_bgxwy")
+text = "Pilih Stage"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Returnpilihkelas" type="Button" parent="."]
+offset_left = 947.0
+offset_top = 510.0
+offset_right = 1103.0
+offset_bottom = 596.0
+theme = SubResource("Theme_ngfbo")
+theme_override_fonts/font = ExtResource("3_gq6d1")
+theme_override_font_sizes/font_size = 30
+text = "Return"
+
+[connection signal="pressed" from="Stage 3-1" to="." method="_on_stage_31_pressed"]
+[connection signal="pressed" from="Stage 3-1" to="Stage 3-1" method="_on_pressed"]
+[connection signal="pressed" from="Stage 3-2" to="." method="_on_stage_32_pressed"]
+[connection signal="pressed" from="Stage 3-3" to="." method="_on_stage_33_pressed"]
+[connection signal="pressed" from="Returnpilihkelas" to="." method="_on_returnpilihkelas_pressed"]

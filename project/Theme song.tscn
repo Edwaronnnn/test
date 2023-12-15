@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqu7533823cwo"]
+
+[ext_resource type="AudioStream" uid="uid://cmvyeue1lcj31" path="res://back-into-lockdown-latin-piano-misfortune-trouble-strife-171671.mp3" id="1_xf36f"]
+
+[node name="Music" type="AudioStreamPlayer"]
+stream = ExtResource("1_xf36f")
+volume_db = -5.3
+autoplay = true
+bus = &"music"

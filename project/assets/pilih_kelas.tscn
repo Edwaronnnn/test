@@ -1,59 +1,75 @@
-[gd_scene load_steps=16 format=3 uid="uid://ctoupgkahdulj"]
+[gd_scene load_steps=21 format=3 uid="uid://ctoupgkahdulj"]
 
 [ext_resource type="Script" path="res://class_select.gd" id="1_rdw4m"]
 [ext_resource type="Texture2D" uid="uid://b6bulqqep5xm" path="res://assets/images/backgrounds/bedroom-boy.png" id="2_87gg5"]
-[ext_resource type="Texture2D" uid="uid://dx08tvq1ieo8" path="res://assets/images/buttons.png" id="3_6urvs"]
+[ext_resource type="FontFile" uid="uid://buamlm1honkuj" path="res://assets/fonts/ACMESecretAgentBB_BoldItal.ttf" id="4_5w5y3"]
+[ext_resource type="FontFile" uid="uid://do3pxv13ofxuk" path="res://assets/fonts/ACMESecretAgentBB_Reg.ttf" id="5_fosfp"]
+[ext_resource type="AudioStream" uid="uid://cwhiwjmpdpau3" path="res://assets/sounds/button-124476.mp3" id="6_4pcjd"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uccrm"]
-texture = ExtResource("3_6urvs")
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kh4io"]
+load_path = "res://.godot/imported/buttons.png-75fb77b99909d3d0b6f3beb8b32d56a7.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ee70g"]
+texture = SubResource("CompressedTexture2D_kh4io")
 region_rect = Rect2(433, 49, 314, 111)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d4dbx"]
-texture = ExtResource("3_6urvs")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ldhd5"]
+texture = SubResource("CompressedTexture2D_kh4io")
 region_rect = Rect2(433, 49, 314, 111)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d1xcp"]
-texture = ExtResource("3_6urvs")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_elvin"]
+texture = SubResource("CompressedTexture2D_kh4io")
 region_rect = Rect2(433, 49, 314, 111)
 
 [sub_resource type="Theme" id="Theme_t3501"]
-Button/styles/hover = SubResource("StyleBoxTexture_uccrm")
-Button/styles/normal = SubResource("StyleBoxTexture_d4dbx")
-Button/styles/pressed = SubResource("StyleBoxTexture_d1xcp")
+Button/styles/hover = SubResource("StyleBoxTexture_ee70g")
+Button/styles/normal = SubResource("StyleBoxTexture_ldhd5")
+Button/styles/pressed = SubResource("StyleBoxTexture_elvin")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4xyic"]
-texture = ExtResource("3_6urvs")
+texture = SubResource("CompressedTexture2D_kh4io")
 region_rect = Rect2(433, 49, 314, 111)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hfq0n"]
-texture = ExtResource("3_6urvs")
+texture = SubResource("CompressedTexture2D_kh4io")
 region_rect = Rect2(433, 49, 314, 111)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1qb66"]
-texture = ExtResource("3_6urvs")
+texture = SubResource("CompressedTexture2D_kh4io")
 region_rect = Rect2(433, 49, 314, 111)
 
 [sub_resource type="Theme" id="Theme_xi8lp"]
+default_font = ExtResource("4_5w5y3")
+default_font_size = 27
 Button/styles/hover = SubResource("StyleBoxTexture_4xyic")
 Button/styles/normal = SubResource("StyleBoxTexture_hfq0n")
 Button/styles/pressed = SubResource("StyleBoxTexture_1qb66")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eu4b1"]
-texture = ExtResource("3_6urvs")
+texture = SubResource("CompressedTexture2D_kh4io")
 region_rect = Rect2(433, 49, 314, 111)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2reyu"]
-texture = ExtResource("3_6urvs")
+texture = SubResource("CompressedTexture2D_kh4io")
 region_rect = Rect2(433, 49, 314, 111)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eft6w"]
-texture = ExtResource("3_6urvs")
+texture = SubResource("CompressedTexture2D_kh4io")
 region_rect = Rect2(433, 49, 314, 111)
 
 [sub_resource type="Theme" id="Theme_05nyt"]
+default_font = ExtResource("4_5w5y3")
+default_font_size = 27
 Button/styles/hover = SubResource("StyleBoxTexture_eu4b1")
 Button/styles/normal = SubResource("StyleBoxTexture_2reyu")
 Button/styles/pressed = SubResource("StyleBoxTexture_eft6w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xr3k6"]
+texture = SubResource("CompressedTexture2D_kh4io")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="Theme" id="Theme_fkrys"]
+Label/styles/normal = SubResource("StyleBoxTexture_xr3k6")
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_rdw4m")
@@ -64,29 +80,50 @@ scale = Vector2(0.640625, 0.628906)
 texture = ExtResource("2_87gg5")
 
 [node name="Kelas 1" type="Button" parent="."]
-offset_left = 35.0
-offset_top = 56.0
-offset_right = 99.0
-offset_bottom = 111.0
+offset_left = 17.0
+offset_top = 297.0
+offset_right = 219.0
+offset_bottom = 381.0
 theme = SubResource("Theme_t3501")
+theme_override_fonts/font = ExtResource("4_5w5y3")
+theme_override_font_sizes/font_size = 27
 text = "Kelas 1"
 
 [node name="Kelas 2" type="Button" parent="."]
-offset_left = 120.0
-offset_top = 60.0
-offset_right = 183.0
-offset_bottom = 113.0
+offset_left = 14.0
+offset_top = 401.0
+offset_right = 221.0
+offset_bottom = 484.0
 theme = SubResource("Theme_xi8lp")
 text = "Kelas 2"
 
 [node name="Kelas 3" type="Button" parent="."]
-offset_left = 193.0
-offset_top = 57.0
-offset_right = 272.0
-offset_bottom = 111.0
+offset_left = 14.0
+offset_top = 499.0
+offset_right = 221.0
+offset_bottom = 587.0
 theme = SubResource("Theme_05nyt")
 text = "Kelas 3"
 
+[node name="Label" type="Label" parent="."]
+offset_left = 439.0
+offset_top = 53.0
+offset_right = 651.0
+offset_bottom = 161.0
+theme = SubResource("Theme_fkrys")
+theme_override_fonts/font = ExtResource("5_fosfp")
+theme_override_font_sizes/font_size = 27
+text = "Pilih Level"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_4pcjd")
+
+[connection signal="mouse_entered" from="Kelas 1" to="." method="_on_kelas_1_mouse_entered"]
 [connection signal="pressed" from="Kelas 1" to="." method="_on_kelas_1_pressed"]
+[connection signal="mouse_entered" from="Kelas 2" to="." method="_on_kelas_2_mouse_entered"]
 [connection signal="pressed" from="Kelas 2" to="." method="_on_kelas_2_pressed"]
+[connection signal="mouse_entered" from="Kelas 3" to="." method="_on_kelas_3_mouse_entered"]
 [connection signal="pressed" from="Kelas 3" to="." method="_on_kelas_3_pressed"]
+[connection signal="mouse_entered" from="Label" to="." method="_on_label_mouse_entered"]

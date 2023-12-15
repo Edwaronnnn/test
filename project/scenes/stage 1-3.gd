@@ -1,7 +1,7 @@
 extends Node2D
 
 # Variables for game logic
-var targetWord := "ARTERI"
+var targetWord := "PROTEIN"
 var guessedWord := ""
 var maxAttempts := 5
 var attemptsLeft := maxAttempts
@@ -21,14 +21,9 @@ func _ready():
 	countdown_timer.start()
 
 
-	pictureTextures = [
-		preload("res://assets/images/clarity0.jpg"),
-		preload("res://assets/images/mayoi_spiralgeass.png"),
-		preload("res://icon.svg"),
-		# Add more stages as needed
-	]
+
 	
-	$Sprite.texture = pictureTextures[pictureStage]
+
 	guessedWordLabel = $GuessedWordLabel  # Replace "LabelNodeName" with the actual name of your Label node in the scene
 
 	# Initialize guessedWord with underscores for each letter in targetWord
@@ -109,7 +104,7 @@ func _on_q_pressed():
 	guess_letter("Q")
 
 func _process(delta):
-	$ChanceLeft.text = "Chances Left: " + str(attemptsLeft)
+	$ChanceLeft.text = "Kesempatan Tersisa: " + str(attemptsLeft)
 func _on_r_pressed():
 	$click.play()
 	guess_letter("R")
@@ -162,6 +157,7 @@ func _on_z_pressed():
 func guess_letter(letter):
 	if targetWord.find(letter) == -1:
 		attemptsLeft -= 1
+		$wrong.play()
 	else:
 		# The guessed letter is in the target word.
 		# Find all occurrences of the letter in the target word.
@@ -196,10 +192,8 @@ func guess_letter(letter):
 		if targetWord == guessedWord:
 			checkGameStatus()
 		else:
-			# Increment the pictureStage and update the picture
-			pictureStage += 1
-			if pictureStage < pictureTextures.size():
-				$Sprite.texture = pictureTextures[pictureStage]
+			pass
+			
 	
 	# Check if the game is over (win or lose)
 	checkGameStatus()
@@ -214,14 +208,15 @@ func checkGameStatus():
 			SceneTransition.change_scene("res://game_over_1.tscn")
 	elif targetWord == guessedWord:
 		# Player won
+		Autoscript.chancesleft = attemptsLeft
+
 		var tree = get_tree()
-		if tree and attemptsLeft < 4 :
-			SceneTransition.change_scene("res://scenes/control.tscn")
-
-
-
-
-
+		if tree and attemptsLeft <= 1 :
+			SceneTransition.change_scene("res://1 star.tscn")
+		elif tree and attemptsLeft <= 3 :
+			SceneTransition.change_scene("res://2  star.tscn")
+		elif tree and attemptsLeft <= 5 :
+			SceneTransition.change_scene("res://3  star.tscn")
 
 
 

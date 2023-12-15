@@ -1,0 +1,798 @@
+[gd_scene load_steps=140 format=3 uid="uid://n63o6q11fj5i"]
+
+[ext_resource type="Script" path="res://scenes/stage 2-2.gd" id="1_geauo"]
+[ext_resource type="Texture2D" uid="uid://bebcj4sa1562m" path="res://assets/images/backgrounds/pool.png" id="2_1gper"]
+[ext_resource type="Theme" uid="uid://dakct6dred8mh" path="res://assets/new_theme.tres" id="3_pubwr"]
+[ext_resource type="Texture2D" uid="uid://rpkqi7g2qnvu" path="res://assets/images/Keyboard Asset/B-Key.png" id="4_54p5r"]
+[ext_resource type="Texture2D" uid="uid://ds5j63ft6tmun" path="res://assets/images/Keyboard Asset/C-Key.png" id="5_o175v"]
+[ext_resource type="Texture2D" uid="uid://cxdrsgoynfpwu" path="res://assets/images/Keyboard Asset/D-Key.png" id="6_4t73j"]
+[ext_resource type="Texture2D" uid="uid://bwo24pr7ro8bn" path="res://assets/images/Keyboard Asset/E-Key.png" id="7_xqeii"]
+[ext_resource type="Texture2D" uid="uid://xfjxkqrlgsov" path="res://assets/images/Keyboard Asset/F-Key.png" id="8_igkl0"]
+[ext_resource type="Texture2D" uid="uid://cf5jjqb03g25g" path="res://assets/images/Keyboard Asset/G-Key.png" id="9_pvhsc"]
+[ext_resource type="Texture2D" uid="uid://ppa7d0355us" path="res://assets/images/Keyboard Asset/H-Key.png" id="10_lbnlm"]
+[ext_resource type="Texture2D" uid="uid://80br3bewdgi5" path="res://assets/images/Keyboard Asset/I-Key.png" id="11_yi7do"]
+[ext_resource type="Texture2D" uid="uid://x3llres0ajmj" path="res://assets/images/Keyboard Asset/J-Key.png" id="12_m33cd"]
+[ext_resource type="Texture2D" uid="uid://cv3b2t3oiv172" path="res://assets/images/Keyboard Asset/K-Key.png" id="13_t1qm6"]
+[ext_resource type="Texture2D" uid="uid://dnaie8k4dwbqr" path="res://assets/images/Keyboard Asset/L-Key.png" id="14_rbuhs"]
+[ext_resource type="Texture2D" uid="uid://bsy0pjqusklsp" path="res://assets/images/Keyboard Asset/M-Key.png" id="15_o7bnc"]
+[ext_resource type="Texture2D" uid="uid://d0i7sr3gheevo" path="res://assets/images/Keyboard Asset/N-Key.png" id="16_vluks"]
+[ext_resource type="Texture2D" uid="uid://dcqr17lwixh7m" path="res://assets/images/Keyboard Asset/O-Key.png" id="17_lc3ac"]
+[ext_resource type="Texture2D" uid="uid://bu3tmtdnhyn45" path="res://assets/images/Keyboard Asset/P-Key.png" id="18_paex2"]
+[ext_resource type="Texture2D" uid="uid://cykp38vjmc5wk" path="res://assets/images/Keyboard Asset/Q-Key.png" id="19_3jhx2"]
+[ext_resource type="Texture2D" uid="uid://d1esxhqgc8r52" path="res://assets/images/Keyboard Asset/R-Key.png" id="20_guqoa"]
+[ext_resource type="Texture2D" uid="uid://dqmy41ov7sh1r" path="res://assets/images/Keyboard Asset/S-Key.png" id="21_bsnhf"]
+[ext_resource type="Texture2D" uid="uid://bmxqs1r1emtkt" path="res://assets/images/Keyboard Asset/T-Key.png" id="22_xo8bq"]
+[ext_resource type="Texture2D" uid="uid://tyuwivxj0yqr" path="res://assets/images/Keyboard Asset/U-Key.png" id="23_xwsx7"]
+[ext_resource type="Texture2D" uid="uid://b60jn28cfhm6m" path="res://assets/images/Keyboard Asset/V-Key.png" id="24_va1n4"]
+[ext_resource type="Texture2D" uid="uid://cf3827wp4gt6y" path="res://assets/images/Keyboard Asset/W-Key.png" id="25_ug4la"]
+[ext_resource type="Texture2D" uid="uid://cnhdwth0qc646" path="res://assets/images/Keyboard Asset/X-Key.png" id="26_bqbxg"]
+[ext_resource type="Texture2D" uid="uid://b0io7vfndi0px" path="res://assets/images/Keyboard Asset/Y-Key.png" id="27_x1itp"]
+[ext_resource type="Texture2D" uid="uid://dgh0nftki5k0c" path="res://assets/images/Keyboard Asset/Z-Key.png" id="28_ee1no"]
+[ext_resource type="Texture2D" uid="uid://by31xl061lam8" path="res://assets/images/backgrounds/BG Timer.png" id="29_lescl"]
+[ext_resource type="Texture2D" uid="uid://gmbvjm1tx70u" path="res://Tilemap/tilemap_packed.png" id="29_m1lgf"]
+[ext_resource type="PackedScene" uid="uid://dp8otw1igh6rb" path="res://timer.tscn" id="30_gdcla"]
+[ext_resource type="AudioStream" uid="uid://cwhiwjmpdpau3" path="res://assets/sounds/button-124476.mp3" id="31_0lpa2"]
+[ext_resource type="Texture2D" uid="uid://cmo5l4gwd3y" path="res://assets/images/detective 1.png" id="32_enn46"]
+[ext_resource type="Texture2D" uid="uid://k8q4kujc6evs" path="res://assets/images/backgrounds/BG Text 1.png" id="33_cciqo"]
+[ext_resource type="FontFile" uid="uid://dg6i0xu8oe2mw" path="res://assets/fonts/crimes.ttf" id="34_14kjq"]
+[ext_resource type="Texture2D" uid="uid://b45gosc06yr12" path="res://assets/images/backgrounds/Bubble Speech.png" id="36_gaqs2"]
+[ext_resource type="FontFile" uid="uid://bm5w0f2udits4" path="res://assets/fonts/Top Secret Stamp.ttf" id="37_jytye"]
+[ext_resource type="AudioStream" uid="uid://cu3ym01a4duxy" path="res://assets/sounds/wrong-47985.mp3" id="38_cye7g"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_na8ue"]
+texture = ExtResource("4_54p5r")
+region_rect = Rect2(0, 5, 32, 27.75)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rhsl6"]
+texture = ExtResource("4_54p5r")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_sy80m"]
+Button/styles/hover = SubResource("StyleBoxTexture_na8ue")
+Button/styles/normal = SubResource("StyleBoxTexture_na8ue")
+Button/styles/pressed = SubResource("StyleBoxTexture_rhsl6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jsoam"]
+texture = ExtResource("5_o175v")
+region_rect = Rect2(0, 5, 33, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ldayf"]
+texture = ExtResource("5_o175v")
+region_rect = Rect2(0, 5, 33, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2d4av"]
+texture = ExtResource("5_o175v")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_exbfw"]
+Button/styles/hover = SubResource("StyleBoxTexture_jsoam")
+Button/styles/normal = SubResource("StyleBoxTexture_ldayf")
+Button/styles/pressed = SubResource("StyleBoxTexture_2d4av")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tkydj"]
+texture = ExtResource("6_4t73j")
+region_rect = Rect2(0, 5, 33, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fgv3n"]
+texture = ExtResource("6_4t73j")
+region_rect = Rect2(0, 5, 33, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h5x4e"]
+texture = ExtResource("6_4t73j")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_ksqjx"]
+Button/styles/hover = SubResource("StyleBoxTexture_tkydj")
+Button/styles/normal = SubResource("StyleBoxTexture_fgv3n")
+Button/styles/pressed = SubResource("StyleBoxTexture_h5x4e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0cs1x"]
+texture = ExtResource("7_xqeii")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3iupn"]
+texture = ExtResource("7_xqeii")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tllc4"]
+texture = ExtResource("7_xqeii")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_amqma"]
+Button/styles/hover = SubResource("StyleBoxTexture_0cs1x")
+Button/styles/normal = SubResource("StyleBoxTexture_3iupn")
+Button/styles/pressed = SubResource("StyleBoxTexture_tllc4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7r8xq"]
+texture = ExtResource("8_igkl0")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0hnct"]
+texture = ExtResource("8_igkl0")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q7nu0"]
+texture = ExtResource("8_igkl0")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_kuw8p"]
+Button/styles/hover = SubResource("StyleBoxTexture_7r8xq")
+Button/styles/normal = SubResource("StyleBoxTexture_0hnct")
+Button/styles/pressed = SubResource("StyleBoxTexture_q7nu0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d133m"]
+texture = ExtResource("9_pvhsc")
+region_rect = Rect2(0, 5, 33, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2g3fj"]
+texture = ExtResource("9_pvhsc")
+region_rect = Rect2(0, 5, 33, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0oegk"]
+texture = ExtResource("9_pvhsc")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_wd4gp"]
+Button/styles/hover = SubResource("StyleBoxTexture_d133m")
+Button/styles/normal = SubResource("StyleBoxTexture_2g3fj")
+Button/styles/pressed = SubResource("StyleBoxTexture_0oegk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y431t"]
+texture = ExtResource("10_lbnlm")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hhmwd"]
+texture = ExtResource("10_lbnlm")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ljqwn"]
+texture = ExtResource("10_lbnlm")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_avgo7"]
+Button/styles/hover = SubResource("StyleBoxTexture_y431t")
+Button/styles/normal = SubResource("StyleBoxTexture_hhmwd")
+Button/styles/pressed = SubResource("StyleBoxTexture_ljqwn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_80ht4"]
+texture = ExtResource("11_yi7do")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0qf4r"]
+texture = ExtResource("11_yi7do")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_clesl"]
+texture = ExtResource("11_yi7do")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="Theme" id="Theme_b6hm0"]
+Button/styles/hover = SubResource("StyleBoxTexture_80ht4")
+Button/styles/normal = SubResource("StyleBoxTexture_0qf4r")
+Button/styles/pressed = SubResource("StyleBoxTexture_clesl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qjlwg"]
+texture = ExtResource("12_m33cd")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hckp6"]
+texture = ExtResource("12_m33cd")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_euh7y"]
+texture = ExtResource("12_m33cd")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="Theme" id="Theme_1edd3"]
+Button/styles/hover = SubResource("StyleBoxTexture_qjlwg")
+Button/styles/normal = SubResource("StyleBoxTexture_hckp6")
+Button/styles/pressed = SubResource("StyleBoxTexture_euh7y")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b6w8l"]
+texture = ExtResource("13_t1qm6")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jot0r"]
+texture = ExtResource("13_t1qm6")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cvf1v"]
+texture = ExtResource("13_t1qm6")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_b8t5f"]
+Button/styles/hover = SubResource("StyleBoxTexture_b6w8l")
+Button/styles/normal = SubResource("StyleBoxTexture_jot0r")
+Button/styles/pressed = SubResource("StyleBoxTexture_cvf1v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bokxl"]
+texture = ExtResource("14_rbuhs")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jwb4c"]
+texture = ExtResource("14_rbuhs")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kykti"]
+texture = ExtResource("14_rbuhs")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_hvuxf"]
+Button/styles/hover = SubResource("StyleBoxTexture_bokxl")
+Button/styles/normal = SubResource("StyleBoxTexture_jwb4c")
+Button/styles/pressed = SubResource("StyleBoxTexture_kykti")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_stqg0"]
+texture = ExtResource("15_o7bnc")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gu7al"]
+texture = ExtResource("15_o7bnc")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_720tu"]
+texture = ExtResource("15_o7bnc")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_c17q4"]
+Button/styles/hover = SubResource("StyleBoxTexture_stqg0")
+Button/styles/normal = SubResource("StyleBoxTexture_gu7al")
+Button/styles/pressed = SubResource("StyleBoxTexture_720tu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_daqq7"]
+texture = ExtResource("16_vluks")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g3ym3"]
+texture = ExtResource("16_vluks")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dv8mo"]
+texture = ExtResource("16_vluks")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_cjkbt"]
+Button/styles/hover = SubResource("StyleBoxTexture_daqq7")
+Button/styles/normal = SubResource("StyleBoxTexture_g3ym3")
+Button/styles/pressed = SubResource("StyleBoxTexture_dv8mo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_he2xe"]
+texture = ExtResource("17_lc3ac")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nrh7f"]
+texture = ExtResource("17_lc3ac")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k0mdq"]
+texture = ExtResource("17_lc3ac")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_47sw7"]
+Button/styles/hover = SubResource("StyleBoxTexture_he2xe")
+Button/styles/normal = SubResource("StyleBoxTexture_nrh7f")
+Button/styles/pressed = SubResource("StyleBoxTexture_k0mdq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wcn6b"]
+texture = ExtResource("18_paex2")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_btb4g"]
+texture = ExtResource("18_paex2")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8yobl"]
+texture = ExtResource("18_paex2")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_x1mur"]
+Button/styles/hover = SubResource("StyleBoxTexture_wcn6b")
+Button/styles/normal = SubResource("StyleBoxTexture_btb4g")
+Button/styles/pressed = SubResource("StyleBoxTexture_8yobl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8p1xc"]
+texture = ExtResource("19_3jhx2")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8y7x7"]
+texture = ExtResource("19_3jhx2")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rslvw"]
+texture = ExtResource("19_3jhx2")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_l38vw"]
+Button/styles/hover = SubResource("StyleBoxTexture_8p1xc")
+Button/styles/normal = SubResource("StyleBoxTexture_8y7x7")
+Button/styles/pressed = SubResource("StyleBoxTexture_rslvw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_adr6x"]
+texture = ExtResource("20_guqoa")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hn62w"]
+texture = ExtResource("20_guqoa")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oslsr"]
+texture = ExtResource("20_guqoa")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_pgjq1"]
+Button/styles/hover = SubResource("StyleBoxTexture_adr6x")
+Button/styles/normal = SubResource("StyleBoxTexture_hn62w")
+Button/styles/pressed = SubResource("StyleBoxTexture_oslsr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uox2f"]
+texture = ExtResource("21_bsnhf")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wki3g"]
+texture = ExtResource("21_bsnhf")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6fc5w"]
+texture = ExtResource("21_bsnhf")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_ggqou"]
+Button/styles/hover = SubResource("StyleBoxTexture_uox2f")
+Button/styles/normal = SubResource("StyleBoxTexture_wki3g")
+Button/styles/pressed = SubResource("StyleBoxTexture_6fc5w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3i0d5"]
+texture = ExtResource("22_xo8bq")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k3qnd"]
+texture = ExtResource("22_xo8bq")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iw18a"]
+texture = ExtResource("22_xo8bq")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_mffn8"]
+Button/styles/hover = SubResource("StyleBoxTexture_3i0d5")
+Button/styles/normal = SubResource("StyleBoxTexture_k3qnd")
+Button/styles/pressed = SubResource("StyleBoxTexture_iw18a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v7wj3"]
+texture = ExtResource("23_xwsx7")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w46h6"]
+texture = ExtResource("23_xwsx7")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_syaxo"]
+texture = ExtResource("23_xwsx7")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_32as6"]
+Button/styles/hover = SubResource("StyleBoxTexture_v7wj3")
+Button/styles/normal = SubResource("StyleBoxTexture_w46h6")
+Button/styles/pressed = SubResource("StyleBoxTexture_syaxo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wumhc"]
+texture = ExtResource("24_va1n4")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rtf1b"]
+texture = ExtResource("24_va1n4")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0p0wy"]
+texture = ExtResource("24_va1n4")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_dbd4r"]
+Button/styles/hover = SubResource("StyleBoxTexture_wumhc")
+Button/styles/normal = SubResource("StyleBoxTexture_rtf1b")
+Button/styles/pressed = SubResource("StyleBoxTexture_0p0wy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v8gbm"]
+texture = ExtResource("25_ug4la")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_amxk2"]
+texture = ExtResource("25_ug4la")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5w7i2"]
+texture = ExtResource("25_ug4la")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_ccsrt"]
+Button/styles/hover = SubResource("StyleBoxTexture_v8gbm")
+Button/styles/normal = SubResource("StyleBoxTexture_amxk2")
+Button/styles/pressed = SubResource("StyleBoxTexture_5w7i2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_311t8"]
+texture = ExtResource("26_bqbxg")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qcehd"]
+texture = ExtResource("26_bqbxg")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j2f7g"]
+texture = ExtResource("26_bqbxg")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_eaebl"]
+Button/styles/hover = SubResource("StyleBoxTexture_311t8")
+Button/styles/normal = SubResource("StyleBoxTexture_qcehd")
+Button/styles/pressed = SubResource("StyleBoxTexture_j2f7g")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3qug5"]
+texture = ExtResource("27_x1itp")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dkhsm"]
+texture = ExtResource("27_x1itp")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bfr2r"]
+texture = ExtResource("27_x1itp")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_mc6l0"]
+Button/styles/hover = SubResource("StyleBoxTexture_3qug5")
+Button/styles/normal = SubResource("StyleBoxTexture_dkhsm")
+Button/styles/pressed = SubResource("StyleBoxTexture_bfr2r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d5re7"]
+texture = ExtResource("28_ee1no")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_shopr"]
+texture = ExtResource("28_ee1no")
+region_rect = Rect2(0, 5, 32, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mmax4"]
+texture = ExtResource("28_ee1no")
+region_rect = Rect2(32, 6, 32, 26)
+
+[sub_resource type="Theme" id="Theme_62uwl"]
+Button/styles/hover = SubResource("StyleBoxTexture_d5re7")
+Button/styles/normal = SubResource("StyleBoxTexture_shopr")
+Button/styles/pressed = SubResource("StyleBoxTexture_mmax4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uo41v"]
+texture = ExtResource("36_gaqs2")
+
+[sub_resource type="Theme" id="Theme_exup4"]
+Label/styles/normal = SubResource("StyleBoxTexture_uo41v")
+
+[node name="Node2D2" type="Node2D"]
+script = ExtResource("1_geauo")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_1gper")
+metadata/_edit_use_anchors_ = true
+
+[node name="A" type="Button" parent="."]
+offset_left = 308.0
+offset_top = 530.0
+offset_right = 344.0
+offset_bottom = 569.0
+size_flags_stretch_ratio = 4.19
+theme = ExtResource("3_pubwr")
+metadata/_edit_use_anchors_ = true
+
+[node name="B" type="Button" parent="."]
+offset_left = 535.0
+offset_top = 592.0
+offset_right = 579.0
+offset_bottom = 630.0
+theme = SubResource("Theme_sy80m")
+metadata/_edit_use_anchors_ = true
+
+[node name="C" type="Button" parent="."]
+offset_left = 428.0
+offset_top = 594.0
+offset_right = 468.0
+offset_bottom = 628.0
+theme = SubResource("Theme_exbfw")
+metadata/_edit_use_anchors_ = true
+
+[node name="D" type="Button" parent="."]
+offset_left = 414.0
+offset_top = 536.0
+offset_right = 454.0
+offset_bottom = 570.0
+theme = SubResource("Theme_ksqjx")
+metadata/_edit_use_anchors_ = true
+
+[node name="E" type="Button" parent="."]
+offset_left = 408.0
+offset_top = 462.0
+offset_right = 448.0
+offset_bottom = 496.0
+theme = SubResource("Theme_amqma")
+metadata/_edit_use_anchors_ = true
+
+[node name="F" type="Button" parent="."]
+offset_left = 480.0
+offset_top = 538.0
+offset_right = 520.0
+offset_bottom = 572.0
+theme = SubResource("Theme_kuw8p")
+metadata/_edit_use_anchors_ = true
+
+[node name="G" type="Button" parent="."]
+offset_left = 551.0
+offset_top = 541.0
+offset_right = 591.0
+offset_bottom = 575.0
+theme = SubResource("Theme_wd4gp")
+metadata/_edit_use_anchors_ = true
+
+[node name="H" type="Button" parent="."]
+offset_left = 606.0
+offset_top = 540.0
+offset_right = 646.0
+offset_bottom = 574.0
+theme = SubResource("Theme_avgo7")
+metadata/_edit_use_anchors_ = true
+
+[node name="I" type="Button" parent="."]
+offset_left = 650.0
+offset_top = 460.0
+offset_right = 690.0
+offset_bottom = 494.0
+theme = SubResource("Theme_b6hm0")
+metadata/_edit_use_anchors_ = true
+
+[node name="J" type="Button" parent="."]
+offset_left = 659.0
+offset_top = 541.0
+offset_right = 699.0
+offset_bottom = 575.0
+theme = SubResource("Theme_1edd3")
+metadata/_edit_use_anchors_ = true
+
+[node name="K" type="Button" parent="."]
+offset_left = 710.0
+offset_top = 540.0
+offset_right = 751.0
+offset_bottom = 571.0
+theme = SubResource("Theme_b8t5f")
+metadata/_edit_use_anchors_ = true
+
+[node name="L" type="Button" parent="."]
+offset_left = 765.0
+offset_top = 538.0
+offset_right = 805.0
+offset_bottom = 572.0
+theme = SubResource("Theme_hvuxf")
+metadata/_edit_use_anchors_ = true
+
+[node name="M" type="Button" parent="."]
+offset_left = 647.0
+offset_top = 590.0
+offset_right = 687.0
+offset_bottom = 624.0
+theme = SubResource("Theme_c17q4")
+metadata/_edit_use_anchors_ = true
+
+[node name="N" type="Button" parent="."]
+offset_left = 591.0
+offset_top = 592.0
+offset_right = 631.0
+offset_bottom = 626.0
+theme = SubResource("Theme_cjkbt")
+metadata/_edit_use_anchors_ = true
+
+[node name="O" type="Button" parent="."]
+offset_left = 715.0
+offset_top = 460.0
+offset_right = 755.0
+offset_bottom = 494.0
+theme = SubResource("Theme_47sw7")
+metadata/_edit_use_anchors_ = true
+
+[node name="P" type="Button" parent="."]
+offset_left = 775.0
+offset_top = 461.0
+offset_right = 815.0
+offset_bottom = 495.0
+theme = SubResource("Theme_x1mur")
+metadata/_edit_use_anchors_ = true
+
+[node name="Q" type="Button" parent="."]
+offset_left = 307.0
+offset_top = 463.0
+offset_right = 347.0
+offset_bottom = 497.0
+theme = SubResource("Theme_l38vw")
+metadata/_edit_use_anchors_ = true
+
+[node name="R" type="Button" parent="."]
+offset_left = 462.0
+offset_top = 461.0
+offset_right = 502.0
+offset_bottom = 495.0
+theme = SubResource("Theme_pgjq1")
+metadata/_edit_use_anchors_ = true
+
+[node name="S" type="Button" parent="."]
+offset_left = 355.0
+offset_top = 536.0
+offset_right = 395.0
+offset_bottom = 570.0
+theme = SubResource("Theme_ggqou")
+metadata/_edit_use_anchors_ = true
+
+[node name="T" type="Button" parent="."]
+offset_left = 508.0
+offset_top = 459.0
+offset_right = 548.0
+offset_bottom = 493.0
+theme = SubResource("Theme_mffn8")
+metadata/_edit_use_anchors_ = true
+
+[node name="U" type="Button" parent="."]
+offset_left = 600.0
+offset_top = 460.0
+offset_right = 640.0
+offset_bottom = 494.0
+theme = SubResource("Theme_32as6")
+metadata/_edit_use_anchors_ = true
+
+[node name="V" type="Button" parent="."]
+offset_left = 483.0
+offset_top = 594.0
+offset_right = 523.0
+offset_bottom = 628.0
+theme = SubResource("Theme_dbd4r")
+metadata/_edit_use_anchors_ = true
+
+[node name="W" type="Button" parent="."]
+offset_left = 357.0
+offset_top = 464.0
+offset_right = 397.0
+offset_bottom = 498.0
+theme = SubResource("Theme_ccsrt")
+metadata/_edit_use_anchors_ = true
+
+[node name="X" type="Button" parent="."]
+offset_left = 377.0
+offset_top = 596.0
+offset_right = 417.0
+offset_bottom = 630.0
+theme = SubResource("Theme_eaebl")
+metadata/_edit_use_anchors_ = true
+
+[node name="Y" type="Button" parent="."]
+offset_left = 553.0
+offset_top = 455.0
+offset_right = 593.0
+offset_bottom = 489.0
+theme = SubResource("Theme_mc6l0")
+metadata/_edit_use_anchors_ = true
+
+[node name="Z" type="Button" parent="."]
+offset_left = 335.0
+offset_top = 595.0
+offset_right = 367.0
+offset_bottom = 631.0
+theme = SubResource("Theme_62uwl")
+metadata/_edit_use_anchors_ = true
+
+[node name="BgTimer" type="Sprite2D" parent="."]
+position = Vector2(1068.5, 50.4375)
+scale = Vector2(0.0213541, 0.0336034)
+texture = ExtResource("29_lescl")
+
+[node name="TilemapPacked" type="Sprite2D" parent="."]
+position = Vector2(832, 101)
+texture = ExtResource("29_m1lgf")
+region_enabled = true
+
+[node name="Timer2" parent="." instance=ExtResource("30_gdcla")]
+position = Vector2(1062, 36)
+
+[node name="click" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(798, 1)
+stream = ExtResource("31_0lpa2")
+
+[node name="StarTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 60.0
+autostart = true
+
+[node name="Detective1" type="Sprite2D" parent="."]
+position = Vector2(1088, 552)
+scale = Vector2(0.2625, 0.25125)
+texture = ExtResource("32_enn46")
+
+[node name="BgText1" type="Sprite2D" parent="."]
+position = Vector2(563, 278)
+scale = Vector2(0.119792, 0.161497)
+texture = ExtResource("33_cciqo")
+
+[node name="GuessedWordLabel" type="Label" parent="."]
+offset_left = 176.0
+offset_top = 183.0
+offset_right = 959.0
+offset_bottom = 339.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("34_14kjq")
+theme_override_font_sizes/font_size = 27
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Textbox" type="Label" parent="."]
+offset_left = 790.0
+offset_top = 379.0
+offset_right = 1083.0
+offset_bottom = 535.0
+theme = SubResource("Theme_exup4")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hint" type="Label" parent="."]
+offset_left = 739.0
+offset_top = 393.0
+offset_right = 1142.0
+offset_bottom = 490.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("37_jytye")
+theme_override_font_sizes/font_size = 19
+text = "Proses air
+menjadi es
+disebut ..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="wrong" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(771, 208)
+stream = ExtResource("38_cye7g")
+volume_db = -11.218
+
+[node name="ChanceLeft" type="Label" parent="."]
+offset_left = 724.0
+offset_top = 206.0
+offset_right = 904.0
+offset_bottom = 276.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("34_14kjq")
+theme_override_font_sizes/font_size = 20
+text = "Kesempatan Tersisa:"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="A" to="." method="_on_a_pressed"]
+[connection signal="pressed" from="B" to="." method="_on_b_pressed"]
+[connection signal="pressed" from="C" to="." method="_on_c_pressed"]
+[connection signal="pressed" from="D" to="." method="_on_d_pressed"]
+[connection signal="pressed" from="E" to="." method="_on_e_pressed"]
+[connection signal="pressed" from="F" to="." method="_on_f_pressed"]
+[connection signal="pressed" from="G" to="." method="_on_g_pressed"]
+[connection signal="pressed" from="H" to="." method="_on_h_pressed"]
+[connection signal="pressed" from="I" to="." method="_on_i_pressed"]
+[connection signal="pressed" from="J" to="." method="_on_j_pressed"]
+[connection signal="pressed" from="K" to="." method="_on_k_pressed"]
+[connection signal="pressed" from="L" to="." method="_on_l_pressed"]
+[connection signal="pressed" from="M" to="." method="_on_m_pressed"]
+[connection signal="pressed" from="N" to="." method="_on_n_pressed"]
+[connection signal="pressed" from="O" to="." method="_on_o_pressed"]
+[connection signal="pressed" from="P" to="." method="_on_p_pressed"]
+[connection signal="pressed" from="Q" to="." method="_on_q_pressed"]
+[connection signal="pressed" from="R" to="." method="_on_r_pressed"]
+[connection signal="pressed" from="S" to="." method="_on_s_pressed"]
+[connection signal="pressed" from="T" to="." method="_on_t_pressed"]
+[connection signal="pressed" from="U" to="." method="_on_u_pressed"]
+[connection signal="pressed" from="V" to="." method="_on_v_pressed"]
+[connection signal="pressed" from="W" to="." method="_on_w_pressed"]
+[connection signal="pressed" from="X" to="." method="_on_x_pressed"]
+[connection signal="pressed" from="Y" to="." method="_on_y_pressed"]
+[connection signal="pressed" from="Z" to="." method="_on_z_pressed"]
+[connection signal="timeout" from="StarTimer" to="." method="_on_star_timer_timeout"]

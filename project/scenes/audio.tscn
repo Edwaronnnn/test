@@ -1,18 +1,61 @@
-[gd_scene load_steps=4 format=3 uid="uid://dcpulufg65xas"]
+[gd_scene load_steps=14 format=3 uid="uid://dcpulufg65xas"]
 
 [ext_resource type="Script" path="res://buttons.gd" id="1_01o3c"]
 [ext_resource type="Script" path="res://scenes/HSlider.gd" id="2_g4uic"]
+[ext_resource type="Texture2D" uid="uid://dybvky31nfaun" path="res://assets/images/buttons.png" id="3_2vyvp"]
 [ext_resource type="Script" path="res://scenes/Sound Button2.gd" id="3_t45xt"]
+[ext_resource type="FontFile" uid="uid://dg6i0xu8oe2mw" path="res://assets/fonts/crimes.ttf" id="4_383ne"]
+[ext_resource type="AudioStream" uid="uid://cwhiwjmpdpau3" path="res://assets/sounds/button-124476.mp3" id="6_x8uil"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kkiud"]
+texture = ExtResource("3_2vyvp")
+region_rect = Rect2(434, 631, 319, 114)
+
+[sub_resource type="Theme" id="Theme_31ju7"]
+Label/styles/normal = SubResource("StyleBoxTexture_kkiud")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kh4io"]
+load_path = "res://.godot/imported/buttons.png-75fb77b99909d3d0b6f3beb8b32d56a7.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ioi3e"]
+texture = SubResource("CompressedTexture2D_kh4io")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hu17p"]
+texture = SubResource("CompressedTexture2D_kh4io")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qkf6h"]
+texture = SubResource("CompressedTexture2D_kh4io")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="Theme" id="Theme_23csm"]
+Button/styles/hover = SubResource("StyleBoxTexture_ioi3e")
+Button/styles/normal = SubResource("StyleBoxTexture_hu17p")
+Button/styles/pressed = SubResource("StyleBoxTexture_qkf6h")
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_01o3c")
 
+[node name="Label" type="Label" parent="."]
+offset_left = 263.0
+offset_top = 99.0
+offset_right = 764.0
+offset_bottom = 490.0
+theme = SubResource("Theme_31ju7")
+theme_override_fonts/font = ExtResource("4_383ne")
+theme_override_font_sizes/font_size = 30
+text = "
+
+Sound Setting"
+horizontal_alignment = 1
+
 [node name="volume_slider" type="HSlider" parent="."]
 unique_name_in_owner = true
-offset_left = 413.0
-offset_top = 217.0
-offset_right = 639.0
-offset_bottom = 445.0
+offset_left = 416.0
+offset_top = 104.0
+offset_right = 617.0
+offset_bottom = 345.0
 max_value = 1.0
 step = 0.001
 value = 1.0
@@ -20,18 +63,19 @@ script = ExtResource("2_g4uic")
 bus_name = "music"
 
 [node name="Return" type="Button" parent="."]
-offset_left = 611.0
-offset_top = 614.0
-offset_right = 754.0
-offset_bottom = 645.0
+offset_left = 439.0
+offset_top = 585.0
+offset_right = 582.0
+offset_bottom = 616.0
+theme = SubResource("Theme_23csm")
+theme_override_fonts/font = ExtResource("4_383ne")
+theme_override_font_sizes/font_size = 27
 text = "Return"
 script = ExtResource("3_t45xt")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 424.0
-offset_top = 288.0
-offset_right = 464.0
-offset_bottom = 311.0
+[node name="click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_x8uil")
 
+[connection signal="mouse_entered" from="Return" to="." method="_on_return_mouse_entered"]
 [connection signal="pressed" from="Return" to="." method="_on_sound_button_pressed"]
 [connection signal="pressed" from="Return" to="." method="_on_return_pressed"]

@@ -1,20 +1,23 @@
-[gd_scene load_steps=17 format=3 uid="uid://b83yblssj0jdk"]
+[gd_scene load_steps=18 format=3 uid="uid://b83yblssj0jdk"]
 
 [ext_resource type="Script" path="res://Control.gd" id="1_8b2ey"]
 [ext_resource type="Texture2D" uid="uid://sy380qkcrwwp" path="res://assets/images/main-sdxl_178e56722c34d2967671d0be308d631181cc506c8f5733cd52789570de443a9f.png" id="2_6mw6p"]
 [ext_resource type="AudioStream" uid="uid://cwhiwjmpdpau3" path="res://assets/sounds/button-124476.mp3" id="3_tx7rs"]
-[ext_resource type="Texture2D" uid="uid://dx08tvq1ieo8" path="res://assets/images/buttons.png" id="4_7wn32"]
+[ext_resource type="Texture2D" uid="uid://crs4orthbm3fw" path="res://assets/images/mystery word 1.png" id="5_dacyy"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kh4io"]
+load_path = "res://.godot/imported/buttons.png-75fb77b99909d3d0b6f3beb8b32d56a7.ctex"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eri7d"]
-texture = ExtResource("4_7wn32")
+texture = SubResource("CompressedTexture2D_kh4io")
 region_rect = Rect2(433, 49, 314, 111)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_84ran"]
-texture = ExtResource("4_7wn32")
+texture = SubResource("CompressedTexture2D_kh4io")
 region_rect = Rect2(433, 49, 314, 111)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jtr38"]
-texture = ExtResource("4_7wn32")
+texture = SubResource("CompressedTexture2D_kh4io")
 region_rect = Rect2(433, 49, 314, 111)
 
 [sub_resource type="Theme" id="Theme_n40q7"]
@@ -23,15 +26,15 @@ Button/styles/normal = SubResource("StyleBoxTexture_84ran")
 Button/styles/pressed = SubResource("StyleBoxTexture_jtr38")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nyx4m"]
-texture = ExtResource("4_7wn32")
+texture = SubResource("CompressedTexture2D_kh4io")
 region_rect = Rect2(433, 49, 314, 111)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_13hgr"]
-texture = ExtResource("4_7wn32")
+texture = SubResource("CompressedTexture2D_kh4io")
 region_rect = Rect2(433, 49, 314, 111)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o26kj"]
-texture = ExtResource("4_7wn32")
+texture = SubResource("CompressedTexture2D_kh4io")
 region_rect = Rect2(433, 49, 314, 111)
 
 [sub_resource type="Theme" id="Theme_lvfma"]
@@ -40,15 +43,15 @@ Button/styles/normal = SubResource("StyleBoxTexture_13hgr")
 Button/styles/pressed = SubResource("StyleBoxTexture_o26kj")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_onp47"]
-texture = ExtResource("4_7wn32")
+texture = SubResource("CompressedTexture2D_kh4io")
 region_rect = Rect2(433, 49, 314, 111)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ii6f2"]
-texture = ExtResource("4_7wn32")
+texture = SubResource("CompressedTexture2D_kh4io")
 region_rect = Rect2(433, 49, 314, 111)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oju6v"]
-texture = ExtResource("4_7wn32")
+texture = SubResource("CompressedTexture2D_kh4io")
 region_rect = Rect2(433, 49, 314, 111)
 
 [sub_resource type="Theme" id="Theme_2uen3"]
@@ -82,9 +85,6 @@ offset_bottom = 311.0
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="music" type="AudioStreamPlayer2D" parent="."]
-volume_db = 4.19
-
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="ParallaxBackground"]
@@ -94,30 +94,35 @@ stream = ExtResource("3_tx7rs")
 
 [node name="Play" type="Button" parent="."]
 layout_mode = 2
-offset_left = 60.0
-offset_top = 358.0
-offset_right = 164.0
-offset_bottom = 423.0
+offset_left = 549.0
+offset_top = 325.0
+offset_right = 653.0
+offset_bottom = 390.0
 theme = SubResource("Theme_n40q7")
-text = "PLAY"
+text = "MAIN"
 
 [node name="Option" type="Button" parent="."]
 layout_mode = 2
-offset_left = 64.0
-offset_top = 435.0
-offset_right = 164.0
-offset_bottom = 497.0
+offset_left = 549.0
+offset_top = 400.0
+offset_right = 653.0
+offset_bottom = 465.0
 theme = SubResource("Theme_lvfma")
-text = "OPTION"
+text = "SETELAN"
 
 [node name="Quit" type="Button" parent="."]
 layout_mode = 2
-offset_left = 66.0
-offset_top = 511.0
-offset_right = 158.0
-offset_bottom = 581.0
+offset_left = 549.0
+offset_top = 473.0
+offset_right = 653.0
+offset_bottom = 538.0
 theme = SubResource("Theme_2uen3")
-text = "QUIT"
+text = "KELUAR"
+
+[node name="MysteryWord1" type="Sprite2D" parent="."]
+position = Vector2(612, 200)
+scale = Vector2(0.077908, 0.0772376)
+texture = ExtResource("5_dacyy")
 
 [connection signal="mouse_entered" from="Play" to="." method="_on_play_mouse_entered"]
 [connection signal="pressed" from="Play" to="." method="_on_button_pressed"]

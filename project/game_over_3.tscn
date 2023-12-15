@@ -1,0 +1,68 @@
+[gd_scene load_steps=12 format=3 uid="uid://cioph6nkrvo05"]
+
+[ext_resource type="Script" path="res://game_over_3.gd" id="1_4pfd0"]
+[ext_resource type="Texture2D" uid="uid://lyhn12l81hov" path="res://assets/images/backgrounds/abandoned-house.png" id="2_05j47"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kh4io"]
+load_path = "res://.godot/imported/buttons.png-75fb77b99909d3d0b6f3beb8b32d56a7.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e78gx"]
+texture = SubResource("CompressedTexture2D_kh4io")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_beene"]
+texture = SubResource("CompressedTexture2D_kh4io")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_73tju"]
+texture = SubResource("CompressedTexture2D_kh4io")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="Theme" id="Theme_k8b2s"]
+Button/styles/hover = SubResource("StyleBoxTexture_e78gx")
+Button/styles/normal = SubResource("StyleBoxTexture_beene")
+Button/styles/pressed = SubResource("StyleBoxTexture_73tju")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w5gey"]
+texture = SubResource("CompressedTexture2D_kh4io")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_saslp"]
+texture = SubResource("CompressedTexture2D_kh4io")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aprja"]
+texture = SubResource("CompressedTexture2D_kh4io")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="Theme" id="Theme_by7lf"]
+Button/styles/hover = SubResource("StyleBoxTexture_w5gey")
+Button/styles/normal = SubResource("StyleBoxTexture_saslp")
+Button/styles/pressed = SubResource("StyleBoxTexture_aprja")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_4pfd0")
+
+[node name="Abandoned-house" type="Sprite2D" parent="."]
+position = Vector2(580.75, 323.5)
+scale = Vector2(0.717188, 0.702381)
+texture = ExtResource("2_05j47")
+
+[node name="Try again" type="Button" parent="."]
+offset_left = 541.0
+offset_top = 303.0
+offset_right = 641.0
+offset_bottom = 360.0
+theme = SubResource("Theme_k8b2s")
+text = "Return"
+
+[node name="Main Menu" type="Button" parent="."]
+offset_left = 542.0
+offset_top = 372.0
+offset_right = 640.0
+offset_bottom = 427.0
+theme = SubResource("Theme_by7lf")
+text = "Main Menu"
+
+[connection signal="pressed" from="Try again" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Main Menu" to="." method="_on_button_2_pressed"]

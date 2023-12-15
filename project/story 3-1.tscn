@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://dyq8dhfsfy5pm"]
+
+[ext_resource type="Script" path="res://story 3-1.gd" id="1_1v02o"]
+[ext_resource type="Texture2D" uid="uid://ciy7llgg6c1yd" path="res://assets/images/backgrounds/bar.png" id="2_kwon6"]
+[ext_resource type="Texture2D" uid="uid://7gsj55npjwv6" path="res://assets/images/detective sprite.png" id="4_k6jvm"]
+[ext_resource type="Texture2D" uid="uid://b4jsfs4u81jlg" path="res://assets/images/boss sprite.png" id="5_s2aox"]
+[ext_resource type="AudioStream" uid="uid://cwhiwjmpdpau3" path="res://assets/sounds/button-124476.mp3" id="6_i8rfq"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kh4io"]
+load_path = "res://.godot/imported/buttons.png-75fb77b99909d3d0b6f3beb8b32d56a7.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w8m48"]
+texture = SubResource("CompressedTexture2D_kh4io")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3514r"]
+texture = SubResource("CompressedTexture2D_kh4io")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c41t7"]
+texture = SubResource("CompressedTexture2D_kh4io")
+region_rect = Rect2(433, 49, 314, 111)
+
+[sub_resource type="Theme" id="Theme_22y15"]
+Button/styles/hover = SubResource("StyleBoxTexture_w8m48")
+Button/styles/normal = SubResource("StyleBoxTexture_3514r")
+Button/styles/pressed = SubResource("StyleBoxTexture_c41t7")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_1v02o")
+
+[node name="Bar" type="Sprite2D" parent="."]
+position = Vector2(572.5, 323.5)
+scale = Vector2(0.591146, 0.604629)
+texture = ExtResource("2_kwon6")
+
+[node name="Continue" type="Button" parent="."]
+offset_left = 506.0
+offset_top = 549.0
+offset_right = 640.0
+offset_bottom = 625.0
+theme = SubResource("Theme_22y15")
+text = "LANJUT"
+
+[node name="DetectiveSprite" type="Sprite2D" parent="."]
+position = Vector2(1080, 398)
+scale = Vector2(0.5275, 0.51625)
+texture = ExtResource("4_k6jvm")
+
+[node name="BossSprite" type="Sprite2D" parent="."]
+position = Vector2(88, 405)
+texture = ExtResource("5_s2aox")
+flip_h = true
+
+[node name="click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_i8rfq")
+
+[node name="Skip" type="Button" parent="."]
+offset_left = 991.0
+offset_top = 11.0
+offset_right = 1125.0
+offset_bottom = 87.0
+theme = SubResource("Theme_22y15")
+theme_override_font_sizes/font_size = 20
+text = "Skip"
+
+[connection signal="mouse_entered" from="Continue" to="." method="_on_continue_mouse_entered"]
+[connection signal="pressed" from="Continue" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Skip" to="." method="_on_continue_mouse_entered"]
+[connection signal="pressed" from="Skip" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Skip" to="." method="_on_skip_pressed"]

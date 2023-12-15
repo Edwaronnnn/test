@@ -9,3 +9,13 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _on_button_pressed():
+	SceneTransition.change_scene("res://stage_select_class_1.tscn")
+
+
+func _on_continue_mouse_entered():
+	$click.play()
+func _on_skip_pressed():
+	SceneTransition.change_scene("res://stage_select_class_1.tscn")

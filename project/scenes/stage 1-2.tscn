@@ -1,15 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://colies8m4jvm8"]
+[gd_scene load_steps=5 format=3 uid="uid://dr61mksfpn5d"]
 
-[ext_resource type="Script" path="res://stage1.gd" id="1_jsq1h"]
-[ext_resource type="Shader" path="res://scenes/picture.gdshader" id="2_cao0r"]
-[ext_resource type="Texture2D" uid="uid://brh05gihbt0vf" path="res://icon.svg" id="3_iixfr"]
+[ext_resource type="Script" path="res://stage 1-1.gd" id="1_ponjv"]
+[ext_resource type="Shader" path="res://scenes/picture.gdshader" id="2_d6n54"]
+[ext_resource type="Texture2D" uid="uid://brh05gihbt0vf" path="res://icon.svg" id="3_xqa4q"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_26x83"]
 render_priority = 0
-shader = ExtResource("2_cao0r")
+shader = ExtResource("2_d6n54")
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_jsq1h")
+script = ExtResource("1_ponjv")
 
 [node name="A" type="Button" parent="."]
 offset_left = 234.0
@@ -230,7 +230,7 @@ offset_left = 228.0
 offset_top = 7.0
 offset_right = 356.0
 offset_bottom = 135.0
-texture = ExtResource("3_iixfr")
+texture = ExtResource("3_xqa4q")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(619, 67)

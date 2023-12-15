@@ -9,5 +9,9 @@ extends Node2D
 
 
 func _on_return_pressed():
-	get_tree().change_scene_to_file("res://scenes/control.tscn")
+	SceneTransition.change_scene("res://scenes/control.tscn")
 
+
+
+func _on_return_mouse_entered():
+	$click.play()

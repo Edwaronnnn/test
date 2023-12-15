@@ -8,6 +8,7 @@ script = ExtResource("1_uclsy")
 [node name="TimeLimit Tabel" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 
 [node name="TimeLimit" type="Timer" parent="."]
 wait_time = 60.0

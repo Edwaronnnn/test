@@ -14,6 +14,7 @@ func time_left_to_live():
 	var time_left = countdown_timer.time_left
 	var minute = floor(time_left / 60)
 	var second = int(time_left) % 60
+	Autoscript.timeleft = second
 	return [minute, second]
 	
 func _process(delta):

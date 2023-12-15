@@ -1,0 +1,96 @@
+[gd_scene load_steps=12 format=3 uid="uid://c0s41w7naq5bh"]
+
+[ext_resource type="Script" path="res://1 star.gd" id="1_f1icy"]
+[ext_resource type="Texture2D" uid="uid://sy380qkcrwwp" path="res://assets/images/main-sdxl_178e56722c34d2967671d0be308d631181cc506c8f5733cd52789570de443a9f.png" id="2_oigt3"]
+[ext_resource type="Texture2D" uid="uid://dybvky31nfaun" path="res://assets/images/buttons.png" id="3_0j8vt"]
+[ext_resource type="FontFile" uid="uid://dg6i0xu8oe2mw" path="res://assets/fonts/crimes.ttf" id="4_87vnu"]
+[ext_resource type="Texture2D" uid="uid://defmka1dajpcg" path="res://assets/images/star.png" id="5_84xj5"]
+[ext_resource type="FontFile" uid="uid://buamlm1honkuj" path="res://assets/fonts/ACMESecretAgentBB_BoldItal.ttf" id="6_wv1f2"]
+[ext_resource type="Texture2D" uid="uid://u118c5ggesj7" path="res://assets/images/stars.png" id="7_y3va8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rgwyu"]
+texture = ExtResource("3_0j8vt")
+region_rect = Rect2(434, 631, 319, 114)
+
+[sub_resource type="Theme" id="Theme_0ds5y"]
+default_font = ExtResource("4_87vnu")
+Label/styles/normal = SubResource("StyleBoxTexture_rgwyu")
+
+[sub_resource type="Theme" id="Theme_f7685"]
+Label/styles/normal = SubResource("StyleBoxTexture_rgwyu")
+
+[sub_resource type="Theme" id="Theme_73s8c"]
+Button/styles/hover = SubResource("StyleBoxTexture_rgwyu")
+Button/styles/normal = SubResource("StyleBoxTexture_rgwyu")
+Button/styles/pressed = SubResource("StyleBoxTexture_rgwyu")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_f1icy")
+
+[node name="Main-sdxl178e56722c34d2967671d0Be308d631181Cc506c8f5733Cd52789570De443a9f" type="Sprite2D" parent="."]
+position = Vector2(569.5, 332)
+scale = Vector2(1.11426, 0.638672)
+texture = ExtResource("2_oigt3")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 377.0
+offset_top = 28.0
+offset_right = 649.0
+offset_bottom = 118.0
+theme = SubResource("Theme_0ds5y")
+theme_override_font_sizes/font_size = 40
+text = "Stage Complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 191.0
+offset_top = 122.0
+offset_right = 840.0
+offset_bottom = 422.0
+theme = SubResource("Theme_f7685")
+
+[node name="Star" type="Sprite2D" parent="."]
+position = Vector2(308, 205)
+scale = Vector2(0.259046, 0.217619)
+texture = ExtResource("5_84xj5")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 393.0
+offset_top = 470.0
+offset_right = 604.0
+offset_bottom = 614.0
+theme = SubResource("Theme_73s8c")
+theme_override_fonts/font = ExtResource("6_wv1f2")
+theme_override_font_sizes/font_size = 40
+text = "Return"
+
+[node name="stats2" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 239.0
+offset_top = 303.0
+offset_right = 359.0
+offset_bottom = 412.0
+theme_override_fonts/font = ExtResource("4_87vnu")
+theme_override_font_sizes/font_size = 27
+
+[node name="stats" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 229.0
+offset_top = 353.0
+offset_right = 425.0
+offset_bottom = 482.0
+theme_override_fonts/font = ExtResource("4_87vnu")
+theme_override_font_sizes/font_size = 27
+
+[node name="Stars" type="Sprite2D" parent="."]
+position = Vector2(489, 210)
+scale = Vector2(0.258224, 0.214638)
+texture = ExtResource("7_y3va8")
+
+[node name="Stars2" type="Sprite2D" parent="."]
+position = Vector2(682, 208)
+scale = Vector2(0.248355, 0.21875)
+texture = ExtResource("7_y3va8")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

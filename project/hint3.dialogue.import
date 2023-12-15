@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bst7supyk7ejt"
+path="res://.godot/imported/hint3.dialogue-99ed849ad6d88a8fff0c6bd64e92876e.tres"
+
+[deps]
+
+source_file="res://hint3.dialogue"
+dest_files=["res://.godot/imported/hint3.dialogue-99ed849ad6d88a8fff0c6bd64e92876e.tres"]
+
+[params]
+
+defaults=true
